@@ -1,0 +1,9 @@
+<select #selectCarrera (change)="onSelect(selectCarrera.value)" class="select select-primary" name="" carreraId="">
+    <option value=0 selected disabled>Seleccione</option>
+    <option *ngFor="let carrera of carreras"
+    [value]="carrera.carreraId"
+    [selected]="carrera.carreraId === carreraId"
+    >
+        {{carrera.name}}
+    </option>
+</select>

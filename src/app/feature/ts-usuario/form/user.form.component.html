@@ -1,0 +1,118 @@
+<app-user-toolbar [entityName]="currentEntity.name"></app-user-toolbar>
+<div class="grid justify-center mt-5">
+
+  <div class="card shadow-2xl shadow-sky-600">
+    <div class="card-body">
+      <div class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="h-5 w-5 fill-sky-600 inline">
+          <g>
+            <path d="M490.667,234.667H448V192c0-11.782-9.551-21.333-21.333-21.333c-11.782,0-21.333,9.551-21.333,21.333v42.667h-42.667   c-11.782,0-21.333,9.551-21.333,21.333c0,11.782,9.551,21.333,21.333,21.333h42.667V320c0,11.782,9.551,21.333,21.333,21.333   c11.782,0,21.333-9.551,21.333-21.333v-42.667h42.667c11.782,0,21.333-9.551,21.333-21.333   C512,244.218,502.449,234.667,490.667,234.667z"/>
+            <circle cx="192" cy="128" r="128"/>
+            <path d="M192,298.667c-105.99,0.118-191.882,86.01-192,192C0,502.449,9.551,512,21.333,512h341.333   c11.782,0,21.333-9.551,21.333-21.333C383.882,384.677,297.99,298.784,192,298.667z"/>
+          </g>
+        </svg>
+        Solicitud<span class="text-primary">Usuario</span>
+      </div>
+      <div class="divider"> </div>
+      <div class="grid">
+        <label for="">Nombre:</label>
+        <input class="input input-info" type="text" name="" id="" placeholder="Ejemplo: Daniel Perez"
+          [(ngModel)]="currentEntity.name">
+          <label for="">Correo:</label>
+        <input class="input input-info" type="email" name="" id="" placeholder="Ejemplo: User@gmail.com"
+          [(ngModel)]="currentEntity.mail">
+        <label for="">Login</label>
+        <input class="input input-info" type="text" name="" id="" placeholder="Ejemplo: daniel001"
+          [(ngModel)]="currentEntity.login">
+
+          <label for="">contraseña:</label>
+          <input class="input input-info" type="password" name="" id="" placeholder="Min 6 caracteres"
+            [(ngModel)]="currentEntity.contra">
+
+            <label for="">Rol Id:</label>
+          <input class="input input-info" type="text" name="" id="" placeholder="Ejemplo: Rol Admin"
+            [(ngModel)]="currentEntity.rol">
+
+            <label >Carrera</label>
+            <app-carrera-combobox (carreraIdEmitter)="currentEntity.carreraId=$event" [carreraId]="currentEntity.carreraId" ></app-carrera-combobox>
+
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
+            <span class="label-text ml-2">Activo</span>
+          </label>
+        </div>
+        <input class="input input-info" type="date" name="" id="" [(ngModel)]="currentEntity.created">
+      </div>
+     
+      <table class="table table-compact">
+        <thead>
+          <tr>
+            <th>Permiso</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let authorits of currentEntity.authorities">
+            <td>{{authorits.name}}</td>
+            <td >
+              <a (click)="removeAuthorize(authorits.id)">
+                <svg class="w-4 h-4" fill="red"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+               xml:space="preserve">
+               <g>
+                 <path
+                   d="M490.667,96c0-17.673-14.327-32-32-32h-80.555C364.632,25.757,328.549,0.13,288,0h-64   c-40.549,0.13-76.632,25.757-90.112,64H53.333c-17.673,0-32,14.327-32,32l0,0c0,17.673,14.327,32,32,32H64v266.667   C64,459.468,116.532,512,181.333,512h149.333C395.468,512,448,459.468,448,394.667V128h10.667   C476.34,128,490.667,113.673,490.667,96z M384,394.667C384,424.122,360.122,448,330.667,448H181.333   C151.878,448,128,424.122,128,394.667V128h256V394.667z" />
+                 <path
+                   d="M202.667,384c17.673,0,32-14.327,32-32V224c0-17.673-14.327-32-32-32s-32,14.327-32,32v128   C170.667,369.673,184.994,384,202.667,384z" />
+                 <path
+                   d="M309.333,384c17.673,0,32-14.327,32-32V224c0-17.673-14.327-32-32-32s-32,14.327-32,32v128   C277.333,369.673,291.66,384,309.333,384z" />
+               </g>
+             </svg>
+              </a>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <app-authorize-search (authorizeEmitter)="this.currentEntity.authorities.push($event)" ></app-authorize-search>
+            </td>
+          <td></td>
+          </tr>
+        </tbody>
+  </table>
+
+      <div class="card-actions">
+        <button class="btn btn-primary btn-sm" (click)="save()">Guardar</button>
+        <button class="btn btn-sm">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"> </div>
+
+  <div class="card card-compact shadow-2xl  shadow-black bg-yellow-300 rounded-md">
+    <div class="card-body">
+      <div class="card-title">Precaución</div>
+      <p>Eliminara el registro sin poder recuperarlo</p>
+      <div class="card-actions">
+        <label for="my-modal-6" class="btn modal-button btn-secondary btn-xs">Eliminar</label>
+
+
+        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+        <div class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">confirme la eliminación</h3>
+            <p class="py-4">No se revertiran los cambios
+            </p>
+            <div class="modal-action">
+              <label for="my-modal-6" class="btn btn-warning" (click)="deleteById()">Confirmar</label>
+              <label for="my-modal-6" class="btn btn-info">Cancelar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
