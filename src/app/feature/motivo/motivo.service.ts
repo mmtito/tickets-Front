@@ -35,9 +35,9 @@ export class MotivoService {
     return this.http.get<Motivo[]>(this.url+"/findAll", this.httpOptions);
   }
 
-  public findByModulo(term: string): Observable<Motivo[]>{
-    return this.http.get<Motivo[]>(this.url+"/findByModulo/"+term, this.httpOptions);
-  }
+  // public findByModulo(term: string): Observable<Motivo[]>{
+  //   return this.http.get<Motivo[]>(this.url+"/findByModulo/"+term, this.httpOptions);
+  // }
 
   public findByDescripcion(term: string): Observable<Motivo[]>{
     return this.http.get<Motivo[]>(this.url+"/findByDescripcion/"+term, this.httpOptions);

@@ -32,16 +32,16 @@ export class MotivoListComponent implements OnInit {
     )
   }
 
-  public findByModulo(term: string):void {
-    if(term.length>=2){
-      this.motivoService.findByModulo(term).subscribe(
-        (response) => this.motivoList = response
-      )
-    }
-    if (term.length===0){
-      this.findAll();
-    }
-  }
+  // public findByModulo(term: string):void {
+  //   if(term.length>=2){
+  //     this.motivoService.findByModulo(term).subscribe(
+  //       (response) => this.motivoList = response
+  //     )
+  //   }
+  //   if (term.length===0){
+  //     this.findAll();
+  //   }
+  // }
 
   public findByDescripcion(term: string):void {
     if(term.length>=2){

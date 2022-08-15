@@ -7,7 +7,7 @@ import { MotivoService } from '../motivo.service';
   templateUrl: './motivo-search.component.html'
 })
 export class MotivoSearchComponent implements OnInit {
-  
+
 
   constructor(
     private motivoService: MotivoService
@@ -22,7 +22,7 @@ export class MotivoSearchComponent implements OnInit {
 
   onInput(term: string):void {
     if (term.length>=2){
-      this.motivoService.findByModulo(term).subscribe(
+      this.motivoService.findByDescripcion(term).subscribe(
         (response) => this.motivos = response
       )
     }
