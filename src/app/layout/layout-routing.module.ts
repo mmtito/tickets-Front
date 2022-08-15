@@ -11,6 +11,15 @@ import { TicketFormComponent } from '../feature/ticket/form/ticket.form.componen
 import { TicketListComponent } from '../feature/ticket/list/ticket.list.component';
 import { TkrespuestaFormComponent } from '../feature/tkrespuesta/form/tkrespuesta.form.component';
 import { TkrespuestaListComponent } from '../feature/tkrespuesta/list/tkrespuesta-list.component';
+import { ModuloFormComponent } from '../feature/modulo/form/modulo.form.component';
+import { ModuloListComponent } from '../feature/modulo/list/modulo-list.component';
+import { ModuloComponent } from '../feature/modulo/modulo.component';
+import { MotivoFormComponent } from '../feature/motivo/form/motivo.form.component';
+import { MotivoListComponent } from '../feature/motivo/list/motivo-list.component';
+import { RolFormComponent } from '../feature/rol/form/rol.form.component';
+import { RolListComponent } from '../feature/rol/list/rol-list.component';
+import { SugerenciaFormComponent } from '../feature/sugerencia/form/sugerencia.form.component';
+import { SugerenciaListComponent } from '../feature/sugerencia/list/sugerencia-list.component';
 
 
 
@@ -32,7 +41,24 @@ const routes: Routes = [
     {path: 'ticket-form', component:TicketFormComponent},
     {path: 'ticket-form/:id', component:TicketFormComponent},
     {path: 'ticket-list', component:TicketListComponent},
-    {path: 'dashboard', component:DashboardComponent}
+    {path: 'dashboard', component:DashboardComponent},
+    { path: 'modulo-form', component: ModuloFormComponent },
+    { path: 'modulo-form/:id', component: ModuloFormComponent },
+    { path: 'modulo-list', component: ModuloListComponent },
+    { path: 'modulo', component: ModuloComponent },
+    { path: 'sugerencia-form', component: SugerenciaFormComponent },
+    { path: 'sugerencia-form/:id', component: SugerenciaFormComponent },
+    { path: 'sugerencia-list', component: SugerenciaListComponent },
+    { path: 'sugerencia', component: SugerenciaFormComponent },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'motivo', component: MotivoFormComponent },
+    { path: 'motivo-form/:id', component: MotivoFormComponent },
+    { path: 'motivo/:id', component: MotivoFormComponent },
+    { path: '', component: DashboardComponent },
+    { path: 'list', component: MotivoListComponent },
+    {path:'rol-form', component:RolFormComponent},
+    {path:'rol-form/:id', component:RolFormComponent},
+    {path:'rol-list', component:RolListComponent},
   ]
 },
 

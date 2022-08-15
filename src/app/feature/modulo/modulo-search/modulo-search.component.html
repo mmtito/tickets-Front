@@ -1,0 +1,14 @@
+<div class="dropdown dropdown-hover" >
+
+    <input #inputSearchModulo  class="input input-primary input-sm" type="text"
+  placeholder="Agregar"
+  (input)="onInput(inputSearchModulo.value)"
+  >
+    <ul class="menu menu-compact dropdown-content bg-white">
+  
+      <li *ngFor="let item of modulos">
+        <a (click)="onSelect(item)">{{item.nombre}}</a>
+      </li>
+    </ul>
+  
+  </div>

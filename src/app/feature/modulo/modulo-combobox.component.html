@@ -1,0 +1,8 @@
+
+<select #selectModulo (change)="onSelect(selectModulo.value)" name="" id="" class="select select-primary text-black">
+  <option value=0 selected disabled>Seleccionar</option>
+  <option *ngFor="let modulo of modulos"
+    [value]="modulo.id"
+    [selected]="modulo.id === moduloId"
+  >{{modulo.nombre}}</option>
+</select>

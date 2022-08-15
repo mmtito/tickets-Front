@@ -1,0 +1,20 @@
+
+
+
+<div class="flex flex-row p-2 bg-white">
+  <button routerLink="../motivo" class="btn btn-outline btn-sm rounded">
+    <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24"  ><path d="M16.5,10.5h-3v-3a1.5,1.5,0,0,0-3,0v3h-3a1.5,1.5,0,0,0,0,3h3v3a1.5,1.5,0,0,0,3,0v-3h3a1.5,1.5,0,0,0,0-3Z"/></svg>
+   <div class="hidden md:inline">Nuevo</div>
+
+  </button>
+  <div class="text-sm breadcrumbs ml-2 flex-auto">
+    <ul>
+      <li><a routerLink="/layout/list">Motivos</a></li>
+      <li><a>{{entityName}}</a></li>
+
+    </ul>
+  </div>
+  <input #inputSearch class="input input-primary input-sm" type="text" name="" id="" placeholder="buscar"
+   (input)="onInput(inputSearch.value)"
+  >
+</div>

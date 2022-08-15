@@ -22,6 +22,28 @@ import { TipSearchComponent } from './tip/tip-search/tip-search.component';
 import { AuthorizeSearchComponent } from './authorize/authorize-search/authorize-search.component';
 import { EstudianteSearchComponent } from './authority/estudiante-search/estudiante-search.component';
 import { AuthoritySearchComponent } from './authority/authority-search/authority-search.component';
+import { ModuloComponent } from './modulo/modulo.component';
+import { ModuloFormComponent } from './modulo/form/modulo.form.component';
+import { ModuloListComponent } from './modulo/list/modulo-list.component';
+import { ModuloComboboxComponent } from './modulo/modulo-combobox.component';
+import { ModuloSearchComponent } from './modulo/modulo-search/modulo-search.component';
+import { ModuloToolbarComponent } from './modulo/toolbar/modulo-toolbar.component';
+import { MotivoFormComponent } from './motivo/form/motivo.form.component';
+import { MotivoListComponent } from './motivo/list/motivo-list.component';
+import { MotivoComboboxComponent } from './motivo/motivo-combobox.component';
+import { MotivoSearchComponent } from './motivo/motivo-search/motivo-search.component';
+import { MotivoComponent } from './motivo/motivo.component';
+import { MotivoToolbarComponent } from './motivo/toolbar/motivo-toolbar.component';
+import { PersonaComboboxComponent } from './persona/persona-combobox.component';
+import { RolFormComponent } from './rol/form/rol.form.component';
+import { RolListComponent } from './rol/list/rol-list.component';
+import { RolComboboxComponent } from './rol/rol-combobox/rol-combobox.component';
+import { RolSearchComponent } from './rol/rol-search/rol-search.component';
+import { RolToolbarComponent } from './rol/toolbar/rol-toolbar.component';
+import { SugerenciaFormComponent } from './sugerencia/form/sugerencia.form.component';
+import { SugerenciaListComponent } from './sugerencia/list/sugerencia-list.component';
+import { SugerenciaSearchComponent } from './sugerencia/sugerencia-search/sugerencia-search.component';
+import { SugerenciaToolbarComponent } from './sugerencia/toolbar/sugerencia-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +65,29 @@ import { AuthoritySearchComponent } from './authority/authority-search/authority
     TkrespuestaListComponent,
     TkrespuestaToolbarComponent,
     NeedComboboxComponent,
-    AuthoritySearchComponent
+    AuthoritySearchComponent,
+    ModuloComponent,
+    ModuloFormComponent,
+    ModuloComboboxComponent,
+    ModuloListComponent,
+    ModuloToolbarComponent,
+    MotivoComboboxComponent,
+    MotivoFormComponent,
+    MotivoListComponent,
+    MotivoSearchComponent,
+    MotivoComponent,
+    MotivoToolbarComponent,
+    SugerenciaFormComponent,
+    SugerenciaListComponent,
+    SugerenciaSearchComponent,
+    SugerenciaToolbarComponent,
+    RolComboboxComponent,
+    RolFormComponent,
+    RolListComponent,
+    RolToolbarComponent,
+    RolSearchComponent,
+    PersonaComboboxComponent,
+    ModuloSearchComponent
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,11 @@
+<div class="dropdown dropdown-hover">
+  <input #inputSearchSugerencia class="input input-primary input-sm" placeholder="sugerencia"
+  (input)="onInput(inputSearchSugerencia.value)"
+  >
+  <ul class="menu menu-compact dropdown-content bg-blue-600 text-white">
+    <li *ngFor="let item of sugerencias">
+       <a (click)="onSelect(item)">{{item.nombreSugerencia}}</a>
+    </li>
+
+  </ul>
+</div>

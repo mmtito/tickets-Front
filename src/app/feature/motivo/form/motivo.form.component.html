@@ -1,0 +1,151 @@
+<app-motivo-toolbar [entityName]="currentEntity.descripcion"></app-motivo-toolbar>
+
+<div class="grid justify-center mt-10">
+  <div class="card lg:card-side bg-blue-900 shadow-xl">
+    <figure><img
+        src="data:image/jpeg;base64,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"
+        alt="Album" class="w-13 rounded-full  ring ring-primary ring-offset-base-100 ring-offset-2 ml-5"></figure>
+    <div class="card-body">
+
+      <h2 class="card-title text-white">Modulo Motivos</h2>
+      <p class="text-white">Escribir su modulo y una descripcion</p>
+
+
+
+      <label for="" class="text-white">Combo modulo:</label>
+      <app-modulo-combobox class="text-white" (moduloIdEmmiter)="currentEntity.moduloId=$event"
+        [moduloId]="currentEntity.moduloId"></app-modulo-combobox>
+
+
+
+
+
+
+
+
+
+
+      <label for="" class="text-white">Descripcion: </label>
+      <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: actualizacion correo"
+        [(ngModel)]="currentEntity.descripcion">
+      <label class="label cursor-pointer justify-start">
+        <span class="label-text text-white">Activo</span>
+        <input type="checkbox" class="toggle toggle-primary ml-2" [(ngModel)]="currentEntity.enabled" />
+      </label>
+
+     <!-- SECCION DE AUTHORITIES -->
+      <!-- <table class="table table-compact ">
+
+        <thead>
+          <tr>
+            <th>Permiso</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let authority of currentEntity.authorities">
+            <td>{{authority.name}}</td>
+
+            <td>
+              <a (click)="removeAutoriry(authority.id)">
+                <svg class="w-4 h-4"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                xml:space="preserve">
+                <g>
+                  <path
+                    d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256C511.847,114.678,397.322,0.153,256,0z    M341.333,311.189c8.669,7.979,9.229,21.475,1.25,30.144c-7.979,8.669-21.475,9.229-30.144,1.25c-0.434-0.399-0.85-0.816-1.25-1.25   L256,286.165l-55.168,55.168c-8.475,8.185-21.98,7.95-30.165-0.525c-7.984-8.267-7.984-21.373,0-29.64L225.835,256l-55.168-55.168   c-8.185-8.475-7.95-21.98,0.525-30.165c8.267-7.984,21.373-7.984,29.64,0L256,225.835l55.189-55.168   c7.979-8.669,21.475-9.229,30.144-1.25c8.669,7.979,9.229,21.475,1.25,30.144c-0.399,0.434-0.816,0.85-1.25,1.25L286.165,256   L341.333,311.189z" />
+                </g>
+              </svg>
+              </a>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <app-authority-search (authorityEmitter)="this.currentEntity.authorities.push($event)"></app-authority-search>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <label for="" class="text-white">Sugerencias:</label>
+      <table class="table table-compact ">
+        <thead>
+          <tr>
+            <th>sugerencia</th>
+            <th>acciones</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let sugerencia of currentEntity.sugerencias">
+            <td>{{sugerencia.nombreSugerencia}} </td>
+            <td>
+
+              <a (click)="removeSugerencia(sugerencia.id)">
+                <svg class="w-4 h-4"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                xml:space="preserve">
+                <g>
+                  <path
+                    d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256C511.847,114.678,397.322,0.153,256,0z    M341.333,311.189c8.669,7.979,9.229,21.475,1.25,30.144c-7.979,8.669-21.475,9.229-30.144,1.25c-0.434-0.399-0.85-0.816-1.25-1.25   L256,286.165l-55.168,55.168c-8.475,8.185-21.98,7.95-30.165-0.525c-7.984-8.267-7.984-21.373,0-29.64L225.835,256l-55.168-55.168   c-8.185-8.475-7.95-21.98,0.525-30.165c8.267-7.984,21.373-7.984,29.64,0L256,225.835l55.189-55.168   c7.979-8.669,21.475-9.229,30.144-1.25c8.669,7.979,9.229,21.475,1.25,30.144c-0.399,0.434-0.816,0.85-1.25,1.25L286.165,256   L341.333,311.189z" />
+                </g>
+              </svg>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <app-sugerencia-search (sugerenciaEmitter)="this.currentEntity.sugerencias.push($event)"></app-sugerencia-search>
+            </td>
+            <td></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+
+      <label class="label cursor-pointer justify-start">
+        <span class="label-text text-white">Fecha de creacion</span>
+
+      </label>
+      <input class="input input-primary " type="date" name="" id="" [(ngModel)]="currentEntity.created">
+
+
+      <div class="card-actions justify-end">
+        <button class="btn  btn-outline btn-secondary" (click)="save()">Guardar</button>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+
+  <div class="card card-compact shadow-2xl shadow-black bg-blue-900">
+    <div class="card-actions">
+      <div class="card-body">
+        <div class="card-title text-white">Precaucion</div>
+        <p class="text-white">Si elimina el registro no podra recuperarlo</p>
+
+        <label for="my-modal-6" class="btn glass modal-button  btn-outline  btn-secondary  btn-sm">Eliminar</label>
+
+        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+        <div class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h2 class="font-bold text-lg">Advertenca!</h2>
+            <h3 class="font-bold text-lg">Esta seguro de eliminar este registro!</h3>
+            <p class="py-4">no se podran revertir los cambios!</p>
+            <div class="modal-action">
+              <label for="my-modal-6" class="btn btn-outline btn-warning" (click)="deleteById()">confirmar!</label>
+              <label for="my-modal-6" class="btn btn-ghost">Cancelar!</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

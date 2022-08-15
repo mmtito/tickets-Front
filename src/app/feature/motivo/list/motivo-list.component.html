@@ -1,0 +1,35 @@
+<div>
+  <app-motivo-toolbar (termEmiter)="findByDescripcion($event)"></app-motivo-toolbar>
+<div class="overflow-x-auto">
+  <table class="table table-compact w-full">
+    <thead>
+      <tr>
+        <th></th>
+
+        <th>descripcion</th>
+        <th>fecha</th>
+        <th>Modulo</th>
+        <th>Activo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let  motivo  of  motivoList ">
+
+        <td>
+         <a [routerLink]="['../motivo', motivo.motivoId]">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" ><path d="M1.172,19.119A4,4,0,0,0,0,21.947V24H2.053a4,4,0,0,0,2.828-1.172L18.224,9.485,14.515,5.776Z"/><path d="M23.145.855a2.622,2.622,0,0,0-3.71,0L15.929,4.362l3.709,3.709,3.507-3.506A2.622,2.622,0,0,0,23.145.855Z"/></svg>
+         </a>
+
+        </td>
+
+        <td>{{motivo.descripcion}}</td>
+        <td>{{motivo.created}}</td>
+        <td>{{motivo.moduloNombre}}</td>
+        <td> <input class="toggle toggle-primary" type="checkbox" name="" id="" [ngModel]="motivo.enabled"></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+</div>

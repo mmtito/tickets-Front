@@ -1,0 +1,9 @@
+<select #selectMotivo (change)="onSelect(selectMotivo.value)" class="select select-primary" name="" id="">
+<option value=0 selected disabled>Seleccione</option>
+<option *ngFor="let motivo of motivies"
+[value]="motivo.motivoId"
+[selected]="motivo.motivoId === motivoId"
+>
+  {{motivo.descripcion}}
+</option>
+</select>
