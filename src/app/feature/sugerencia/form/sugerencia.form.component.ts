@@ -103,7 +103,7 @@ idMotivo:0,
   removeRol(id:number):void{
     this.currentEntity.rolies=
     this.currentEntity.rolies.filter(
-      (item) =>{item.rolId != id}
+      (item) =>item.rolId != id
     )
   }
 
