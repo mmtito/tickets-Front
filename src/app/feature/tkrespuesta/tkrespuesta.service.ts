@@ -37,7 +37,7 @@ export class TkrespuestaService {
   }
 
   public findByComment(term: String): Observable<Tkrespuesta[]>{
-    return this.http.get<Tkrespuesta[]>(this.url+"/findByComment"+term, this.httpOptions);
+    return this.http.get<Tkrespuesta[]>(this.url+"/findByComment/"+term, this.httpOptions)
   }
 
 }

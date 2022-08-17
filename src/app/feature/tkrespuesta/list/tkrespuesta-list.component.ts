@@ -25,7 +25,7 @@ export class TkrespuestaListComponent implements OnInit {
   }
 
   public findByComment(term: String): void{
-    if (term.length>=3){
+    if (term.length >= 1){
       this.tkrespuestaService.findByComment(term).subscribe(
         (response)=> this.tkrespuestaList = response
       )
